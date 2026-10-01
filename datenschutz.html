@@ -20,10 +20,13 @@
   jener Fassung („Gehen" gross, seine Adresse) sind hier übernommen.
 -->
 <style>
-  :root { --ink: #1f2328; --soft: #5b636b; --line: #d9dde1; --ground: #fafaf8; }
+  :root { --ink: #1f2328; --soft: #5b636b; --line: #d9dde1; --ground: #fafaf8; --link: #3d6a86; }
   @media (prefers-color-scheme: dark) {
-    :root { --ink: #e8eaec; --soft: #a3abb3; --line: #3a3f44; --ground: #16181a; }
+    :root { --ink: #e8eaec; --soft: #a3abb3; --line: #3a3f44; --ground: #16181a; --link: #8fb6cf; }
   }
+  /* Ohne eigene Farbe blieben Links im dunklen Modus im Standard-Dunkelblau
+     des Browsers, auf fast schwarzem Grund kaum zu sehen. */
+  a { color: var(--link); text-underline-offset: 2px; }
   body { margin: 0; background: var(--ground); color: var(--ink);
          font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; }
   main { max-width: 640px; margin: 0 auto; padding: 40px 16px 64px; }
